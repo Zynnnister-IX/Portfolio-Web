@@ -3,11 +3,11 @@
 
 *{
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
+    padding: 0;
+        box-sizing: border-box;
+            text-decoration: none;
+        border: none;
+    outline: none;
   font-family: 'Poppins', sans-serif;
 
 }
@@ -18,14 +18,14 @@ html{
 
 body{
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    background-color: black;
+        height: 100vh;
+            overflow-x: hidden;
+    background-color: #1a1a1a;
     color: white;
 }
 
 header{
-    margin-top: 20px;
+    margin-top: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -83,7 +83,7 @@ section:target ~ header nav a[href="#home"],
         border-bottom: 3px solid rgb(14, 223, 255);
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
-        background-color:#161616;
+        background-color: #1a1a1a;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
 
@@ -114,7 +114,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
+    background-color: #1a1a1a;
     min-height: 100vh;
 }
 
@@ -139,13 +139,13 @@ span{
 }
 
 .home-img{
-    border-radius: 50%;
+    border-radius:20%;
 }
 
 .home-img img{
     position: relative;
-    width: 30vw;
-    border-radius: 50%;
+    width: 25vw;
+    border-radius: 30%;
     box-shadow: 0 0 25px solid rgb(14, 223, 255);
     cursor: pointer;
     transition: 0.25 linear;
@@ -204,16 +204,16 @@ span{
 .typing-text span::before{
     content:"Programmer";
     color: rgb(14, 223, 255);
-    animation: words 20s infinite;  
+    animation: words 15s infinite;  
 }
 
 .typing-text span::after{
     content:"";
-    background-color: black;
+    background-color: 1a1a1;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid black;
+    border-left: 3px solid 1a1a1;
     right: -8;
     animation: cursor 0.6s infinite;
 
@@ -239,7 +239,7 @@ span{
         content: "Artist"
     }
     81%, 100%{
-        content:"Writer"
+        content: "Writer"
     }
 }
 
@@ -268,3 +268,43 @@ span{
         margin-top: 4rem;
     }
 } 
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.skills-content h1{
+    font-size: 3.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 50%;
+}
+
+.skills-content h2{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 50%;
+}
+
+.skills-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 50%;
+}
