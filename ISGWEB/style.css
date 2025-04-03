@@ -61,9 +61,15 @@ nav a{
 }
 
 nav a:hover,
-nav a:active{
+nav a:active,
+section:target ~ header nav a[href="#home"],
+#home:target ~ header nav a[href="#home"],
+#skills:target ~ header nav a[href="#skills"],
+#education:target ~ header nav a[href="#education"],
+#contact:target ~ header nav a[href="#contact"] {
     color: rgb(14, 223, 255);
     border-bottom: 3px solid rgb(14, 223, 255);
+    text-shadow: 0 0 10px rgb(14, 223, 255), 0 0 20px rgb(14, 223, 255);
 }
 
 @media(max-width:995px){
@@ -100,8 +106,7 @@ nav a:active{
 }
 
 section{
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    padding: 50px 20px;
 }
 
 .home{
@@ -110,6 +115,7 @@ section{
     align-items: center;
     gap: 8rem;
     background-color: black;
+    min-height: 100vh;
 }
 
 .home.home-content h1{
@@ -138,7 +144,7 @@ span{
 
 .home-img img{
     position: relative;
-    width: 34vw;
+    width: 30vw;
     border-radius: 50%;
     box-shadow: 0 0 25px solid rgb(14, 223, 255);
     cursor: pointer;
