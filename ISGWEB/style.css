@@ -315,11 +315,28 @@ span{
     margin-bottom: 2rem;
     margin-top: 4rem;
     text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
 
 .education-content p{
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 500;
     margin-bottom: 1rem;
     text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.education-content span{
+    cursor: pointer;
+}
+
+.education-content span:hover{
+    color: black;
+    background-color: rgb(14, 223, 255);
+    background-size:cover;
+    box-shadow: 0 0 15px rgb(14, 223, 255);
 }
