@@ -294,9 +294,70 @@ span{
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
+    margin-top: 1.5rem;
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0;
+}
+
+.skill-icon {
+    width: 50px;
+    height: auto;
+}
+
+.skill-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.skill-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.skill-row p {
+    width: 50px; /* skill names are aligned */
+    text-align: right; /* align right */
+    margin: 0;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 10px;
+    background: transparent;/* make bar transparent */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@keyframes fillAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--width);
+    }
+}
+
+.skill-fill {
+    height: 100%;
+    background: rgb(14, 223, 255);
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+    width: 0%; /* bar starts at 0% */
+    animation: fillAnimation 5s ease-out forwards;
 }
 
 .skills-content p{
@@ -305,7 +366,7 @@ span{
     margin-bottom: 1rem;
     text-align: center;
     animation: appear linear;
-    animation-timeline: view();
+    animation-timeline: view(); /* animation will appear when in line of view */
     animation-range: entry 0;
 }
 
@@ -321,7 +382,7 @@ span{
 }
 
 .education-content p{
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
     text-align: center;
@@ -339,4 +400,52 @@ span{
     background-color: rgb(14, 223, 255);
     background-size:cover;
     box-shadow: 0 0 15px rgb(14, 223, 255);
+}
+
+.contact-content h1{
+    font-size: 3.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content button {
+    background-color: rgb(14, 223, 255); /* Blue background */
+    color: white; 
+    margin-top: 1.5rem;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-content button:hover {
+    background-color: rgb(14, 223, 255);
+    animation: animasi = forwards;
+}
+
+.contact-content button a {
+    color: white; 
+    text-decoration: none;
+    display: block; 
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.contact-content button a:focus {
+    outline: none;
 }
