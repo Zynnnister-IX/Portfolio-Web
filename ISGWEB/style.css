@@ -432,9 +432,18 @@ span{
     transition: 0.3s;
 }
 
+@keyframes animasi{
+    from{
+        scale: 0.5;
+    }
+    to{
+        scale: 1;
+    }
+}
+
 .contact-content button:hover {
     background-color: rgb(14, 223, 255);
-    animation: animasi = forwards;
+    animation: animasi linear;
 }
 
 .contact-content button a {
