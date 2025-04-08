@@ -458,3 +458,8 @@ span{
 .contact-content button a:focus {
     outline: none;
 }
+
+.music{
+    position: fixed;
+    background-color: #1e1e1e;
+}
